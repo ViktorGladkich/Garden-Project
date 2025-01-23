@@ -6,11 +6,11 @@ const initialState = {
   status:'',
   
 };
-
+const API_URL = "https://telran-project-backend-smoky.vercel.app/"
 export const getAllProducts = createAsyncThunk(
   "allProducts/getAllProducts",
   async () => {
-    const res = await fetch("http://localhost:3333/products/all");
+    const res = await fetch(`${API_URL}/products/all`);
     const data = await res.json();
     return data;
   }
