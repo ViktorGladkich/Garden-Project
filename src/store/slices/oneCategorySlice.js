@@ -6,11 +6,11 @@ const initialState = {
   status: "",
   error: "",
 };
-
+const API_URL = "https://telran-project-backend-smoky.vercel.app/"
 export const getOneCategory = createAsyncThunk(
   "oneCategory/getOneCategory",
   async (categoryId) => {
-    const res = await fetch(`http://localhost:3333/categories/${categoryId}`);
+    const res = await fetch(`${API_URL}/categories/${categoryId}`);
     if (!res.ok) {
       throw new Error("No data found");
     }
