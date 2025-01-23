@@ -6,7 +6,7 @@ const initialState = {
   status: "",
   error: "",
 };
-const API_URL = "https://telran-project-backend-smoky.vercel.app/"
+const API_URL = "https://telran-project-backend-smoky.vercel.app"
 export const getOneCategory = createAsyncThunk(
   "oneCategory/getOneCategory",
   async (categoryId) => {
