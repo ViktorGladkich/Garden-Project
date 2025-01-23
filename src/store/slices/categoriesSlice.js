@@ -4,7 +4,7 @@ const initialState = {
   categoriesData: [],
   status:'',
 };
-const API_URL = "https://telran-project-backend-smoky.vercel.app/"
+const API_URL = "https://telran-project-backend-smoky.vercel.app"
 export const getCategories = createAsyncThunk(
   "categories/getCategories",
   async () => {
