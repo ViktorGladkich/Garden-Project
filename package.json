@@ -24,12 +24,14 @@
     "styled-components": "^6.1.9",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+"scripts": {
+  "start": "node backend/index.js",  
+  "dev": "concurrently \"npm run client\" \"npm run start\"",  
+  "client": "npm start --prefix client", 
+  "build": "react-scripts build", 
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
