@@ -4,11 +4,11 @@ import { serverUrl } from "../../utils/config.js";
 const initialState = {
   product: {},
 };
-const API_URL = "https://telran-project-backend-smoky.vercel.app/"
+
 export const getSingleProduct = createAsyncThunk(
   "singleProduct/getSingleProduct",
   async (productId) => {
-    const res = await fetch(`${API_URL}products/${productId}`);
+    const res = await fetch(`${serverUrl}products/${productId}`);
     if (!res.ok) {
       throw new Error("No data found");
     }
