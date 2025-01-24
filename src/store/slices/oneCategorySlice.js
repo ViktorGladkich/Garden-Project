@@ -1,16 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
+import { serverUrl } from "../../utils/config.js";
 const initialState = {
   oneCategoriesData: [],
   filterProductsData: [],
   status: "",
   error: "",
 };
-const API_URL = "https://telran-project-backend-smoky.vercel.app"
+
 export const getOneCategory = createAsyncThunk(
   "oneCategory/getOneCategory",
   async (categoryId) => {
-    const res = await fetch(`${API_URL}/categories/${categoryId}`);
+    const res = await fetch(`${serverUrl}/categories/${categoryId}`);
     if (!res.ok) {
       throw new Error("No data found");
     }
